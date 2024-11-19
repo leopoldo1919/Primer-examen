@@ -1,3 +1,9 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+include 'php/gestio_sessio.php'; 
+?>
 <!DOCTYPE html>
 <html lang="cat">
 <head>
@@ -9,13 +15,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    
     <title>Pàgina Inicial</title>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand">Exercicis de la Primera Prova</a>
+        <p class="navbar-brand">Exercicis de la Primera Prova</p>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,8 +33,13 @@
                     <a class="nav-link" href="?r=exercici">Exercici</a>
                 </li>
                 <li class="nav-item">
-                <button id="loginBtn" class="btn btn-primary">Inicia Sessió</button>
-
+                    <?php
+                    if (usuariIniciatSessio()) {
+                        mostrarBotoPerfil();
+                    } else {
+                        mostrarBotoIniciaSessio();
+                    }
+                    ?>
                 </li>
             </ul>
         </div>
