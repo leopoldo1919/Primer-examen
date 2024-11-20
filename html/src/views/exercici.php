@@ -44,6 +44,12 @@ include 'php/gestio_sessio.php';
             </ul>
         </div>
     </nav>
+    <div class="media-controls">
+        <audio id="audioPlayer" src="audio/Ultra instint.mp3"></audio>
+        <button id="playBtn" class="btn btn-success">Reprodueix</button>
+        <button id="pauseBtn" class="btn btn-warning">Pausa</button>
+        <button id="muteBtn" class="btn btn-danger">Silencia</button>
+    </div>
 <!-- Footer -->
 <footer class="text-center">
         <div class="text-center p-3">

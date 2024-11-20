@@ -144,3 +144,11 @@ footer a:hover {
 .modal-backdrop {
     z-index: 1040 !important; /* Ajustem la capa de fons del modal */
 }
+.media-controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.media-controls button {
+    margin: 5px;
+}
