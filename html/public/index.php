@@ -7,8 +7,9 @@
  include "../src/config.php";
  include "../src/controllers/ctrlIndex.php";
  include "../src/controllers/ctrlJson.php";
- include "../src/controllers/ctrlPerfil.php";
- include "../src/controllers/ctrlExercici.php";
+ include "../src/controllers/ctrlAfegir.php";
+ include "../src/controllers/ctrlCredits.php";
+ include "../src/controllers/ctrlEditar.php";
 
 /**
   * Carreguem les classes del Framework Emeset
@@ -38,10 +39,12 @@ if($r == "") {
      $response = ctrlIndex($request, $response, $container);
 } elseif($r == "json") {
   $response = ctrlJson($request, $response, $container);
-}elseif($r == "perfil") {
-  $response = ctrlPerfil($request, $response, $container);
-}elseif($r == "exercici") {
-  $response = ctrlExercici($request, $response, $container);
+}elseif($r == "afegir") {
+  $response = ctrlAfegir($request, $response, $container);
+}elseif($r == "credits") {
+  $response = ctrlCredits($request, $response, $container);
+}elseif($r == "editar") {
+  $response = ctrlEditar($request, $response, $container);
 } else {
      echo "No existeix la ruta";
  }

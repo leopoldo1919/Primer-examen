@@ -1,0 +1,10 @@
+
+USE exercicis;
+
+CREATE TABLE cansons (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom_canso VARCHAR(100) NOT NULL,
+    artista VARCHAR(100) NOT NULL,
+    ruta_arxiu VARCHAR(255) NOT NULL
+);
+

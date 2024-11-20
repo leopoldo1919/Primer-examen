@@ -1,20 +1,64 @@
-/* Estils generals */
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    background-color: #a9a9a9;
     margin: 0;
+    padding: 0;
 }
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background-color: #a9fcb7;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.player, .options, .previous-song, .song-list {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #FFE4B5;
+}
+
+.player h2, .options h2, .previous-song h2, .song-list h2 {
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+button {
+    margin-left: 10px;
+}
+
+.options label {
+    display: block;
+    margin: 5px 0;
+}
+
 
 .navbar {
     background-color: #343a40;
+    margin-top: 0px;
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar-brand, .nav-link {
-    color: #ffffff !important;
+    color: #ffffff;
+    margin: 0;
 }
 
 .nav-link:hover {
-    color: #ffc107 !important;
+    color: #ffc107;
 }
 
 button {
@@ -32,95 +76,6 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Estils per als modals */
-.modal {
-    display: none; /* Ocult per defecte */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 400px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    position: relative;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.modal button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    background-color: #28a745;
-    color: #ffffff;
-    transition: background-color 0.3s ease;
-}
-
-.modal button[type="submit"]:hover {
-    background-color: #218838;
-}
-
-p {
-    margin-top: 15px;
-}
-
-p button {
-    background: none;
-    border: none;
-    color: #007bff;
-    cursor: pointer;
-    text-decoration: underline;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-p button:hover {
-    color: #0056b3;
-}
 
 footer {
     background-color: #343a40;
@@ -137,13 +92,6 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-.modal {
-    z-index: 1050 !important; /* Bootstrap utilitza aquest valor per defecte per als modals */
-}
-
-.modal-backdrop {
-    z-index: 1040 !important; /* Ajustem la capa de fons del modal */
-}
 .media-controls {
     margin-top: 20px;
     text-align: center;
@@ -151,4 +99,18 @@ footer a:hover {
 
 .media-controls button {
     margin: 5px;
+}
+.deteleButon {
+    background-color: #dc3545; 
+    color: white;
+}
+.afegirCanso_contingut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.registrarCansoForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

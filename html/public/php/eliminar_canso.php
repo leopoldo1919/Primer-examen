@@ -5,17 +5,17 @@ session_start();
 require 'connexio.php';
 
 // Comprovar si l'usuari ha iniciat sessió
-if (!isset($_SESSION['nom_usuari'])) {
+if (!isset($_SESSION['nom_canso'])) {
     header('Location: /Public/?r=index');
     exit;
 }
 
 // Obtenir el nom d'usuari de la sessió
-$nom_usuari = $_SESSION['nom_usuari'];
+$nom_canso = $_SESSION['nom_canso'];
 
 // Preparar i executar la consulta per eliminar l'usuari
-$stmt = $conn->prepare("DELETE FROM usuaris WHERE nom_usuari = ?");
-$stmt->bind_param("s", $nom_usuari);
+$stmt = $conn->prepare("DELETE FROM cansons WHERE nom_canso = ?");
+$stmt->bind_param("s", $nom_canso);
 
 if ($stmt->execute()) {
     // Destruir la sessió després d'eliminar l'usuari
@@ -27,6 +27,6 @@ if ($stmt->execute()) {
     header('Location: /Public/?r=');
     exit;
 } else {
-    echo "Error en eliminar l'usuari. Torna-ho a provar més tard.";
+    echo "Error en eliminar la canço. Torna-ho a provar més tard.";
 }
 ?>
